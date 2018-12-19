@@ -1,0 +1,216 @@
+/*  Mobile   */
+
+*{
+    box-sizing: border-box;
+}
+
+#container{
+    width: 100%;
+    background-image: url(../Bilder/bg-image.jpg);
+    background-repeat: repeat;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+#header{
+    background-color: #074E68;
+    color: white;
+    margin: auto;
+    width: 100%;
+    font-size: 1em;
+    font-family: helvetica, serif;
+    padding: 5px;
+}
+h2{
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+.line{
+    width: 35px;
+    height: 5px;
+    background-color: #f5f5f5;
+    margin: 6px 0;
+}
+.dropbtn {
+    color:  #f5f5f5;
+    text-align: center;
+    padding: 10px;
+    margin-left: 0;
+    width: 50px;
+    float: left;
+}
+.dropdown-content {
+    position: absolute;
+    display: none;
+    background-color: #2c3840;
+
+}
+.dropdown-content a {
+    color: white;
+    padding: 20px 5px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #2c3840;
+    position: static;
+}
+.dropbtn:hover .dropdown-content{
+    display: block;
+}
+
+#menu{
+display: none;
+}
+
+#article{
+    width: 100%;
+    margin: auto;
+}
+h4{
+    font-family: helvetica, serif;
+    color: #074E68;
+    text-align:center;
+    margin: 15px;
+    font-size: 2em;
+}
+p{
+    font-family: helvetica, serif;
+    color: #074E68;
+    margin: 15px;
+    font-size: 1em;
+}
+img{ 
+    width: 75%;
+    margin: auto;
+    border: 2px solid #074e68;
+}
+#footer{
+    background-color: #074E68;
+    font-family: helvetica, serif;
+    color: white;
+    width: 100%;
+    font-size: 1em;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+}
+
+  .clearfix {clear: both;}
+
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+
+
+/* Desktop */
+    
+@supports(display:grid){
+    #container{
+        display: grid;
+    }
+    
+  @media(min-width: 992px){
+      #container{
+          background-image: url(../Bilder/bg-image.jpg);
+          background-repeat: repeat;
+          font-family: helvetica, serif;
+          display: grid;
+          width: 100%;
+          grid-template-columns: 25% 25% 25% 25%;
+          grid-auto-rows: auto;
+          justify-items: stretch;
+          word-wrap: break-word;
+    }
+    #header{
+        grid-column: 1/5;
+        background-color: #074E68;
+        color: white;
+        text-align: center;   
+        margin: auto;
+        font-size: 2em;
+        padding: 5px;
+    }
+    .dropbtn, .dropdown, .dropdown-content{
+        display:none;
+    }
+    #menu{
+        grid-column: 1/5;
+        display: inline;
+        font-size: 1em;
+        background-color: rgb(179, 198, 206);
+        color: white;
+        word-spacing: 20px;
+        padding: 10px;
+        }
+        ul, li, a{
+            display: inline;
+            list-style-type: none;
+            text-decoration: none;
+            color: rgb(104, 101, 7);
+
+        }
+        a:visited{
+            color: rgb(104, 101, 7);
+        }
+        a:hover{
+            color: black;
+        }
+        #article{
+            grid-column: 1/5;
+            padding: 2px;
+            margin: auto;
+        }
+    h4{
+        font-family: helvetica, serif;
+        font-size: 1.5em;
+        color: #074E68;
+        text-align: center;
+    }
+    p{
+        font-family: helvetica, serif;
+        font-size: 1.5em;
+        color: #074E68;
+        float: left;
+        text-align: left;
+        margin: 15px;
+        width: 250px;
+        word-break: keep-all;
+    }
+    img{
+        border: 2px solid #074e68;
+        width: 32%;
+        height: auto;
+        margin: 10px;
+        float: left;
+        clear: right;
+    }
+    #footer{
+        grid-column: 1/5;
+        background-color: #074E68;
+        font-family: helvetica, serif;
+        color: white;
+        font-size: 1.5em;
+        margin-top: 5px;
+        text-align: center;
+    }
+    .clearfix{
+        clear: both;
+    }
+  }
+}
